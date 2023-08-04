@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import numpy as np
 import torch.nn.functional as F
+from typing import Optional
 from transformers import PretrainedConfig, PreTrainedModel
 from transformers.configuration_utils import PretrainedConfig
 
@@ -15,7 +16,7 @@ from transformers.configuration_utils import PretrainedConfig
 class RoFormerSinusoidalPositionalEmbedding(nn.Embedding):
     """This module produces sinusoidal positional embeddings of any length."""
 
-    def __init__(self, num_positions: int, embedding_dim: int, padding_idx: Optional[int] = None) -> None:
+    def __init__(self, num_positions: int, embedding_dim: int, padding_idx: Optional[int] = None):
         super().__init__(num_positions, embedding_dim)
         self.weight = self._init_weight(self.weight)
 
