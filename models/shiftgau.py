@@ -11,7 +11,6 @@ from transformers.configuration_utils import PretrainedConfig
 #     if isinstance(dim, int):
 #         dim = [dim]
 #     x1, x2 = torch.chunk(x, 2, dim=-1)
-
 #     return torch.cat([x1*cos-x2*sin])
 
 
