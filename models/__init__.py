@@ -1,1 +1,1 @@
-from .shiftgau
+from .shiftgau import ShiftGatedNet
