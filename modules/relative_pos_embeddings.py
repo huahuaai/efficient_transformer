@@ -7,7 +7,7 @@ class RotaryPositionalEmbedding(nn.Module):
         self.sinpos = np.array(
             [[pos / np.power(10000, 2 * (j//2) / embed_dim) for j in range(embed_dim)] for pos in range(max_seq_len)]
         )
-        
+        self.pos = torch.FloatTensor(torch.zeros((batch_size, max_seq_len, )))
 
     def forward(self,x):
         x = 0
